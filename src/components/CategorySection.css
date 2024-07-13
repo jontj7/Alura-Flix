@@ -1,0 +1,29 @@
+.category-section {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    justify-content: flex-start; /* Ajusta según la alineación deseada */
+  }
+  
+  .video-card {
+    background: #1e1e1e; /* Fondo oscuro */
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: calc(33.333% - 20px); /* Ancho para tres tarjetas por fila */
+  }
+  
+  @media (max-width: 1024px) {
+    .video-card {
+      width: calc(50% - 20px); /* Ancho para dos tarjetas por fila en dispositivos medianos */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .video-card {
+      width: 100%; /* Ancho completo para una tarjeta por fila en dispositivos pequeños */
+    }
+  }
+  

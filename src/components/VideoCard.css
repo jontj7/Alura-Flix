@@ -1,0 +1,40 @@
+.video-card {
+  position: relative; /* Posición relativa para alinear elementos hijos */
+  display: inline-block; /* Mostrar como bloque en línea */
+  margin: 10px; /* Margen exterior */
+  border-radius: 8px; /* Borde redondeado */
+  overflow: hidden; /* Ocultar cualquier contenido que sobresalga */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.video-card img {
+  width: 100%; /* Ancho completo */
+  height: auto; /* Altura automática */
+  border-radius: 8px 8px 0 0; /* Borde redondeado solo arriba */
+}
+
+.image-buttons {
+  position: absolute; /* Posición absoluta para alinear los botones */
+  bottom: 0; /* Alinear al fondo */
+  left: 0; /* Alinear a la izquierda */
+  width: 100%; /* Ancho completo */
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  display: flex; /* Mostrar como flexbox */
+  justify-content: space-around; /* Espacio alrededor de los botones */
+  padding: 8px 0; /* Padding interior */
+}
+
+.image-buttons .icon {
+  cursor: pointer; /* Cursor de puntero */
+}
+
+.image-buttons .icon-img {
+  width: 24px; /* Tamaño del icono */
+  height: 24px; /* Tamaño del icono */
+  opacity: 0.8; /* Opacidad inicial */
+  transition: opacity 0.3s ease; /* Transición de opacidad suave */
+}
+
+.image-buttons .icon:hover .icon-img {
+  opacity: 1; /* Opacidad completa al pasar el mouse */
+}

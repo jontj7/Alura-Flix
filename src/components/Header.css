@@ -1,0 +1,90 @@
+/* Header.css */
+
+/* Importación de la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1e1e1e; /* Fondo gris oscuro */
+  color: rgb(0, 0, 54); /* Azul neón */
+  font-family: 'Bebas Neue', cursive; /* Fuente similar a Netflix */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.header h1 {
+  font-size: 36px; /* Tamaño de la fuente del título */
+  margin: 0; /* Sin márgenes internos */
+  text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f; /* Efecto de sombra tipo neon */
+  transition: text-shadow 0.3s ease; /* Transición suave para el efecto de sombra */
+}
+
+.header h1:hover {
+  text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f; /* Efecto de sombra más pronunciado al pasar el mouse */
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.header-buttons button {
+  margin-left: 10px; /* Espacio entre los botones */
+  padding: 8px 16px; /* Relleno interno */
+  border: 2px solid transparent; /* Borde transparente */
+  border-radius: 4px; /* Borde redondeado */
+  background-color: transparent; /* Fondo transparente */
+  color: #fff; /* Texto blanco */
+  cursor: pointer; /* Cursor de puntero */
+  font-family: 'Bebas Neue', cursive; /* Fuente similar a Netflix */
+  font-size: 14px; /* Tamaño de la fuente */
+  position: relative; /* Posición relativa para superponer efectos */
+  overflow: hidden; /* Ocultar contenido que sobresale */
+  transition: border-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.header-buttons button:first-child {
+  margin-left: 0; /* Sin margen izquierdo para el primer botón */
+}
+
+.header-buttons button:hover {
+  border-color: #0004ff; /* Borde color cyan al pasar el mouse */
+  color: #ffffff; /* Texto color cyan al pasar el mouse */
+  box-shadow: 0 0 10px 5px #0026ff; /* Sombra estilo neon */
+}
+
+.header-buttons button::before,
+.header-buttons button::after {
+  content: '';
+  position: absolute;
+  width: 300%; /* Ancho exagerado para animación */
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease; /* Transición de opacidad */
+}
+
+.header-buttons button::before {
+  background-color: #00ffff; /* Color de fondo cyan */
+  z-index: -1; /* Colocar detrás del botón */
+  opacity: 0; /* Ocultar inicialmente */
+}
+
+.header-buttons button:hover::before,
+.header-buttons button:focus::before {
+  opacity: 0.2; /* Mostrar gradualmente al pasar el mouse */
+}
+
+.header-buttons button::after {
+  background-color: #00ffff; /* Color de fondo cyan */
+  z-index: -1; /* Colocar detrás del botón */
+  opacity: 0; /* Ocultar inicialmente */
+}
+
+.header-buttons button:hover::after,
+.header-buttons button:focus::after {
+  opacity: 0.2; /* Mostrar gradualmente al pasar el mouse */
+}

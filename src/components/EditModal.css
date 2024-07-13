@@ -1,0 +1,170 @@
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalCloseHover {
+  0% {
+    color: #fff;
+    text-shadow: none;
+  }
+  50% {
+    color: #007bff;
+    text-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
+  }
+  100% {
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
+.edit-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.edit-modal {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  background: #333;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  border: 2px solid #00f;
+  box-shadow: 0 0 15px #00f;
+  animation: modalFadeIn 0.5s ease-out;
+}
+
+.edit-modal .modal-content {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.edit-modal h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #007bff;
+}
+
+.edit-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-modal form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.edit-modal form input,
+.edit-modal form select,
+.edit-modal form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.edit-modal form input::placeholder,
+.edit-modal form textarea::placeholder {
+  color: #888;
+}
+
+.edit-modal form input:focus,
+.edit-modal form select:focus,
+.edit-modal form textarea:focus {
+  outline: none;
+  border-color: #00f;
+  box-shadow: 0 0 5px #00f;
+  transform: scale(1.05);
+}
+
+.edit-modal form .modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-modal form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+
+.edit-modal form button[type="submit"] {
+  background: #007bff;
+  color: #fff;
+}
+
+.edit-modal form button[type="button"] {
+  background: #444;
+  color: #fff;
+}
+
+.edit-modal form button:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.edit-modal form button:focus {
+  outline: none;
+}
+
+.edit-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.edit-modal-close:hover {
+  transform: scale(1.2);
+  animation: modalCloseHover 1s infinite alternate;
+}
+
+.edit-modal-close:focus {
+  outline: none;
+}

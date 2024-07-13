@@ -1,0 +1,71 @@
+/* MainBanner.css */
+
+.main-banner {
+    position: relative;
+    width: 100%; /* Ancho completo de la ventana del navegador */
+    max-width: 100%; /* Límite máximo de ancho */
+    height: auto; /* Se ajustará automáticamente según el contenido */
+    margin: 0 auto; /* Centra horizontalmente */
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  .centered-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajusta según sea necesario para tabletas y móviles */
+    max-width: 100%; /* No supera el ancho del contenedor */
+    height: auto; /* Ajusta automáticamente la altura según el contenido */
+  }
+  
+  .card-image {
+    position: absolute;
+    top: 10%; /* Ajusta la posición vertical según sea necesario */
+    left: 10%; /* Ajusta la posición horizontal según sea necesario */
+    width: 80%; /* Ajusta según sea necesario para tabletas y móviles */
+    max-width: 1363.78px; /* Límite máximo de ancho */
+    height: auto; /* Ajusta automáticamente la altura según el contenido */
+    border-radius: 15px; /* Ajusta el radio de borde según sea necesario */
+    overflow: hidden;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al contenedor sin distorsión */
+  }
+  
+  @media (max-width: 1024px) {
+    .centered-image {
+      width: 90%; /* Ajusta según sea necesario para tabletas */
+    }
+  
+    .card-image {
+      top: 5%; /* Ajusta la posición vertical para tabletas */
+      left: 5%; /* Ajusta la posición horizontal para tabletas */
+      width: 90%; /* Ajusta según sea necesario para tabletas */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .centered-image {
+      width: 100%; /* Ajusta al ancho completo para móviles */
+      top: 10%; /* Ajusta la posición vertical para móviles */
+      left: 0; /* Ajusta la posición horizontal para móviles */
+      transform: none; /* Reinicia la transformación */
+    }
+  
+    .card-image {
+      top: 0; /* Ajusta la posición vertical para móviles */
+      left: 0; /* Ajusta la posición horizontal para móviles */
+      width: 100%; /* Ajusta al ancho completo para móviles */
+      border-radius: 0; /* Reinicia el radio de borde */
+    }
+  }
+  

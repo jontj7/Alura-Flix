@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+  background: #000000E5;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 255, 0.8); /* Sombra azul tipo neón */
+}
+
+.footer-logo {
+  font-family: 'Bebas Neue', cursive; /* Fuente similar a Netflix */
+  font-size: 36px;
+  color: rgb(0, 0, 54); /* Azul neón */
+  text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Importación de la fuente */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');

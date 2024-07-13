@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e; /* Fondo oscuro */
+  color: white; /* Color de texto blanco */
+  font-family: Arial, sans-serif; /* Tipo de fuente */
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+}
+
+.category-section {
+  padding: 20px;
+}
+
+.video-card {
+  background: #262626; /* Fondo oscuro */
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Ancho completo en dispositivos pequeños */
+  position: relative; /* Necesario para la posición del rectángulo */
+}
+
+.video-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.button-rect {
+  background: #333;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px #1a1a1a, -5px -5px 15px #4d4d4d;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.button-rect:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 20px #1a1a1a, -5px -5px 20px #4d4d4d;
+}
+
+.image-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image-buttons div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.image-buttons img {
+  width: 20px; /* Ajustar el ancho de las imágenes */
+  height: 20px; /* Ajustar la altura de las imágenes */
+  margin-right: 5px; /* Espacio a la derecha de la imagen */
+  opacity: 0.8; /* Opacidad inicial */
+  transition: opacity 0.3s ease; /* Transición de opacidad suave */
+}
+
+.image-buttons img:hover {
+  opacity: 1; /* Opacidad completa al pasar el mouse */
+}
+
+.image-buttons span {
+  color: white; /* Color del texto */
+  font-size: 14px; /* Tamaño de la fuente */
+  transition: color 0.3s ease; /* Transición de color suave */
+}
+
+.image-buttons .edit-button:hover span {
+  color: #00ffff; /* Color neón para el texto */
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+.image-buttons .edit-button:hover img {
+  filter: drop-shadow(0 0 5px #00ffff) drop-shadow(0 0 10px #00ffff);
+}
+
+.image-buttons .delete-button:hover span {
+  color: #ff0000; /* Color rojo para el texto */
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+}
+
+.image-buttons .delete-button:hover img {
+  filter: drop-shadow(0 0 5px #ff0000) drop-shadow(0 0 10px #ff0000);
+}
+
+.video-card.frontend .edit-button:hover span {
+  color: #007bff; /* Color azul para Frontend */
+  text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
+}
+
+.video-card.frontend .edit-button:hover img {
+  filter: drop-shadow(0 0 5px #007bff) drop-shadow(0 0 10px #007bff);
+}
+
+.video-card.backend .edit-button:hover span {
+  color: #00ffff; /* Color turquesa para Backend */
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+.video-card.backend .edit-button:hover img {
+  filter: drop-shadow(0 0 5px #00ffff) drop-shadow(0 0 10px #00ffff);
+}
+
+.video-card.innov .edit-button:hover span {
+  color: #ffeb3b; /* Color amarillo para Innov & Gestión */
+  text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b;
+}
+
+.video-card.innov .edit-button:hover img {
+  filter: drop-shadow(0 0 5px #ffeb3b) drop-shadow(0 0 10px #ffeb3b);
+}
+
+@media (min-width: 768px) {
+  .video-card {
+    width: calc(50% - 20px);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 1024px) {
+  .video-card {
+    width: calc(33.333% - 20px);
+  }
+}
